@@ -15,8 +15,8 @@ public class EmpresaPrivada extends Empresa{
     private double ventas_mensal_fijo; 
     private int numero_sucursales;
     
-    public EmpresaPrivada(String n, String si, String ciudad,Trabajador arr,Trabajador arr2,double ventas,int sucu){
-        super(n,si,ciudad,arr,arr2);
+    public EmpresaPrivada(String n, String si, String ciudad,Trabajador[] t,double ventas,int sucu){
+        super(n,si,ciudad,t);
         setVentas_mensal_fijo(ventas);
         setNumero_sucursales(sucu);
         
@@ -44,7 +44,7 @@ public class EmpresaPrivada extends Empresa{
     public String toString() {
         String cadena;
         cadena = String.format("%sVentas: %.1f\nSucursales: %d\nLista Trabajadores:\n\n%s\n%s",super.toString(),
-                getVentas_mensal_fijo(),getNumero_sucursales(),super.getArr1(),super.getArr2() );
+                getVentas_mensal_fijo(),getNumero_sucursales(), array[0],array[1] );
         return cadena;
     }
     

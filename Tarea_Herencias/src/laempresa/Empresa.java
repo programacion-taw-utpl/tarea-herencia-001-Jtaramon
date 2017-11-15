@@ -16,14 +16,13 @@ public class Empresa {
     protected String nombre;
     protected String siglas;
     protected String ciudad;
-    protected Trabajador[] arr = new Trabajador[2];
+    protected Trabajador[] array ;
     
-    public Empresa(String n, String s, String cl,Trabajador arrtra,Trabajador arrtra2){
+    public Empresa(String n, String s, String cl, Trabajador[]arr){
         setNombre(n);
         setSiglas(s);
         setCiudad(cl);
-        arr[0]=arrtra;
-        arr[1]=arrtra2;
+        setArray(arr);
         
         
     }
@@ -52,19 +51,18 @@ public class Empresa {
         return ciudad;
     }
 
-    public void setArr(Trabajador[] arr) {
-        this.arr [0]= arr[0];
-    }
-    public void setArr2(Trabajador[] arr) {
-        this.arr[1] = arr[1];
+    public void setArray(Trabajador[] arr) {
+        array = arr;
     }
 
-    public Trabajador getArr1() {
-        return arr[0];
+    
+
+    public Trabajador[] getArray() {
+        return array;
     }
-    public Trabajador getArr2() {
-        return arr[1];
-    }
+   
+
+   
 
     
     @Override
